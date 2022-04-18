@@ -1,38 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Realtime;
+using Photon.Pun;
 
-public class Movement : MonoBehaviour
+
+public class Movement : MonoBehaviourPunCallbacks
 {
-    bool cont;
-    // Start is called before the first frame update
+    bool check = true;
+    public Transform parent;
+
+
     void Start()
     {
-        
+        parent = this.transform.parent;
     }
-
-    // Update is called once per framex
     void Update()
     {
-         transform.Translate(Vector3.forward * 6 * Time.deltaTime);
+        transform.Translate(Vector3.forward * 6 * Time.deltaTime);
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("turnR"))
+        if(PhotonNetwork.LocalPlayer.ActorNumber == 1)
         {
-            transform.Rotate(0, 90f, 0);
+            if (other.CompareTag("blueMinion")) 
+            {
+                print("WHYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
+            }
+            //movement
+            if (other.CompareTag("turnR"))
+            {
+                transform.Rotate(0, -90f, 0);
+            }
+            else if (other.CompareTag("turnL"))
+            {
+                transform.Rotate(0, 90f, 0);
+            }
+            else if (other.CompareTag("bridgeup"))
+            {
+                transform.Translate(Vector3.up * 1.5f * Time.deltaTime);
+            }
+            //finish
         }
-        if (other.CompareTag("turnL"))
+        else
         {
-            transform.Rotate(0, -90f, 0);
-        }
-        if (other.CompareTag("bridgeup"))
-        {
-            transform.Translate(Vector3.up * 1.5f * Time.deltaTime);
-        }
-        if (other.CompareTag("Bondorus"))
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 90);
+            if (other.CompareTag("turnR"))
+            {
+                transform.Rotate(0, 90f, 0);
+            }
+            else if (other.CompareTag("turnL"))
+            {
+                transform.Rotate(0, -90f, 0);
+            }
+            else if (other.CompareTag("bridgeup"))
+            {
+                transform.Translate(Vector3.up * 1.5f * Time.deltaTime);
+            }
         }
     }
+  
 }

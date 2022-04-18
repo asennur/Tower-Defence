@@ -9,6 +9,8 @@ TagManager:
   - Bondorus
   - turnL
   - bridgeup
+  - blueMinion
+  - redMinion
   layers:
   - Default
   - TransparentFX
