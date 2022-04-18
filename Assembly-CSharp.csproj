@@ -56,12 +56,12 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AurynSky\Forest Pack\Scripts\ChestDemo.cs" />
-    <Compile Include="Assets\AurynSky\Forest Pack\Scripts\MaterialMover.cs" />
-    <Compile Include="Assets\AurynSky\Forest Pack\Scripts\Rotator.cs" />
-    <Compile Include="Assets\AurynSky\Forest Pack\Scripts\WheelController.cs" />
-    <Compile Include="Assets\AurynSky\WinterArena\Scripts\ChestDemo.cs" />
-    <Compile Include="Assets\AurynSky\WinterArena\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Assets\AurynSky\Forest Pack\Scripts\ChestDemo.cs" />
+    <Compile Include="Assets\Assets\AurynSky\Forest Pack\Scripts\MaterialMover.cs" />
+    <Compile Include="Assets\Assets\AurynSky\Forest Pack\Scripts\Rotator.cs" />
+    <Compile Include="Assets\Assets\AurynSky\Forest Pack\Scripts\WheelController.cs" />
+    <Compile Include="Assets\Assets\AurynSky\WinterArena\Scripts\ChestDemo.cs" />
+    <Compile Include="Assets\Assets\AurynSky\WinterArena\Scripts\Rotator.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
@@ -76,9 +76,11 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
+    <Compile Include="Assets\Scripts\Billboard.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CharacterInsantiate.cs" />
     <Compile Include="Assets\Scripts\Forwaed.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Manage.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
   </ItemGroup>
@@ -90,11 +92,11 @@
     <None Include="Assets\Photon\PhotonUnityNetworking\readme.txt" />
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll" />
     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.dll" />
-    <None Include="Assets\AurynSky\WinterArena\READ ME.txt" />
+    <None Include="Assets\Assets\AurynSky\WinterArena\READ ME.txt" />
     <None Include="Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
     <None Include="Assets\Photon\PhotonUnityNetworking\link.xml" />
-    <None Include="Assets\AurynSky\Forest Pack\READ ME.txt" />
+    <None Include="Assets\Assets\AurynSky\Forest Pack\READ ME.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

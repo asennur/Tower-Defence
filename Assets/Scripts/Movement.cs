@@ -7,13 +7,12 @@ using Photon.Pun;
 
 public class Movement : MonoBehaviourPunCallbacks
 {
-    bool check = true;
-    public Transform parent;
 
+    bool move = true;
 
     void Start()
     {
-        parent = this.transform.parent;
+       
     }
     void Update()
     {
@@ -21,12 +20,13 @@ public class Movement : MonoBehaviourPunCallbacks
     }
     public void OnTriggerEnter(Collider other)
     {
-        if(PhotonNetwork.LocalPlayer.ActorNumber == 1)
+
+        if (other.gameObject.tag == "Warriors")
         {
-            if (other.CompareTag("blueMinion")) 
-            {
-                print("WHYYYYYYYYYYYYYYYYYYYYYYYYYYYY");
-            }
+            move = false;
+        }
+        if (PhotonNetwork.LocalPlayer.ActorNumber == 1)
+        {
             //movement
             if (other.CompareTag("turnR"))
             {
@@ -58,5 +58,12 @@ public class Movement : MonoBehaviourPunCallbacks
             }
         }
     }
-  
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Warriors")
+        {
+            move = true;
+        }
+    }
+
 }
